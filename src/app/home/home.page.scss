@@ -1,0 +1,36 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#ion-card {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.ion-color-toolbar {
+	--ion-color-base: var(--ion-color-toolbar);
+	--ion-color-base-rgb: var(--ion-color-toolbar-rgb);
+	--ion-color-contrast: var(--ion-color-toolbar-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-toolbar-contrast-rgb);
+	--ion-color-shade: var(--ion-color-toolbar-shade);
+	--ion-color-tint: var(--ion-color-toolbar-tint);
+}

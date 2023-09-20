@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="toolbar">
+    <ion-title>
+      RegistrAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">RegistrAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+  <div>
+    <h1 style="text-align:center">Bienvenido!</h1>
+    <br>
+    <h3 style="text-align:center">RegistrAPP</h3>
+  </div>
+  
+  <div>
+    <ion-card class="ion-card"> 
+      <ion-card-content>
+        <form [formGroup]="formularioLogin">
+          <ion-item>
+            <ion-label position="floating">Usuario:</ion-label>
+            <ion-input formControlName="usuario" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña:</ion-label>
+            <ion-input formControlName="contrasena" type="password" value="contrasena"></ion-input>
+          </ion-item>
+        </form>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="login()" expand="full">Acceder</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button [routerLink]="['/reestablecer']" expand="full">Reestablecer contraseña</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ng-container *ngIf="loading">
+        <div class="box-skeleton" *ngFor="let skeleton of [1,2,3]">
+          <ion-skeleton-text [animated]="true" class="skeleton"></ion-skeleton-text>
+        </div>
+      </ng-container>
+
+      <img
+      src="assets/img/LogoDuocUC.svg"> 
+    
+    </ion-card>
+  </div>
+
+ 
+</ion-content>
+
